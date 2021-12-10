@@ -7,9 +7,11 @@ package ui.Department;
 
 import Business.DB4OUtil.DB4OUtil;
 import Business.Department.Department;
+import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
+import ui.Hospital.ManageDoctorJPanel;
 
 /**
  *
@@ -18,7 +20,7 @@ import javax.swing.JPanel;
 public class DepartmentAdminJPanel extends javax.swing.JPanel {
     
     private JPanel CardLayoutJPanel;
-    private Ecosystem business;
+    private EcoSystem business;
     private UserAccount account;
     
     private Department department;
@@ -28,7 +30,7 @@ public class DepartmentAdminJPanel extends javax.swing.JPanel {
      * Creates new form WelcomePatientJPanel
      */
     
-    public DepartmentAdminJPanel(JPanel CardLayoutJPanel, UserAccount account, Ecosystem business) {
+    public DepartmentAdminJPanel(JPanel CardLayoutJPanel, UserAccount account, EcoSystem business) {
         initComponents();
         
         this.CardLayoutJPanel = CardLayoutJPanel;
@@ -130,16 +132,15 @@ public class DepartmentAdminJPanel extends javax.swing.JPanel {
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
          dB4OUtil.storeSystem(business);
-        LoginJPanel loginJPanel = new LoginJPanel(CardLayoutJPanel, business,"");
-        CardLayoutJPanel.add("LoginJPanel", loginJPanel);
+        //LoginJPanel loginJPanel = new LoginJPanel(CardLayoutJPanel, business,"");
+        //CardLayoutJPanel.add("LoginJPanel", loginJPanel);
         CardLayout layout = (CardLayout) CardLayoutJPanel.getLayout();
         layout.next(CardLayoutJPanel);
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     private void btnManagePhysiciansActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManagePhysiciansActionPerformed
         // TODO add your handling code here:
-        
-        ManagePhysicianJPanel managePhysicianJPanel = new ManagePhysicianJPanel(CardLayoutJPanel, null, this.department, this.business);
+        ManageDoctorJPanel managePhysicianJPanel = new ManageDoctorJPanel(CardLayoutJPanel, this.department, this.business);
         CardLayoutJPanel.add("ManagePhysicianJPanel", managePhysicianJPanel);
         CardLayout layout = (CardLayout) CardLayoutJPanel.getLayout();
         layout.next(CardLayoutJPanel); 

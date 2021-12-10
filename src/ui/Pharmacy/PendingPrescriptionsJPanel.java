@@ -53,6 +53,11 @@ public class PendingPrescriptionsJPanel extends javax.swing.JPanel {
         jButton1.setText("jButton1");
 
         jButton2.setText("Ready for Pickup");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Picked Up");
 
@@ -92,6 +97,12 @@ public class PendingPrescriptionsJPanel extends javax.swing.JPanel {
                 .addContainerGap(150, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
