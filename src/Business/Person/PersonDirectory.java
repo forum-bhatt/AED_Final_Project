@@ -12,7 +12,8 @@ import java.util.ArrayList;
  * @author kohli
  */
 public class PersonDirectory {
-      ArrayList<Person> personList;
+    
+    ArrayList<Person> personList;
     
     public PersonDirectory(){
         personList = new ArrayList<Person>();
