@@ -7,6 +7,7 @@ package Business.Pharmacy;
 
 /**
  *
+ * @author kinjal
  */
 public class Pharmacy {
     
