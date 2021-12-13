@@ -13,6 +13,7 @@ import Business.Person.Person;
  *
  * @author kohli
  */
+public class Doctor extends Person{
     
     private int doctorId;
     private Employee emp;
