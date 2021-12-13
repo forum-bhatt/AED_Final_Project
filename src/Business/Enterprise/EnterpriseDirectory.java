@@ -43,6 +43,9 @@ public class EnterpriseDirectory {
         }else if(type==Enterprise.EnterpriseType.Lab){
             enterprise=new LabEnterprise(name);
             enterpriseList.add(enterprise);
+        }else if(type==Enterprise.EnterpriseType.TransportService){
+            enterprise=new TransportEnterprise(name);
+            enterpriseList.add(enterprise);
         }
         return enterprise;
     }

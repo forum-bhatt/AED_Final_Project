@@ -18,6 +18,12 @@ import java.util.ArrayList;
  */
 public class LabEnterprise extends Enterprise{
 
+    private EnterpriseType type;
+     
+     
+     public void setType(EnterpriseType type) {
+        this.type = type;
+    }
     public LabEnterprise(String name){
         super(name,EnterpriseType.Lab);
        // this.cityPatients = new PatientDirectory();

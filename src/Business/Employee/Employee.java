@@ -20,7 +20,11 @@ public class Employee extends Person {
         id = count;
         count++;
     }
-
+    
+    public void setId(int id){
+        this.id = id;
+    }
+    
     public int getId() {
         return id;
     }

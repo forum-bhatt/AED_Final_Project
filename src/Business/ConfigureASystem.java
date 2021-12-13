@@ -22,8 +22,8 @@ public class ConfigureASystem {
     public static EcoSystem configure(){
         
         EcoSystem system = EcoSystem.getInstance();
-        Network boston = system.createAndAddNetwork();
-        boston.setName("Boston");
+         Network boston = system.createAndAddNetwork();
+         boston.setName("Boston");
          
          Enterprise hospital = boston.getEnterpriseDirectory().createAndAddEnterprise("Hospital Enterprise", Enterprise.EnterpriseType.Hospital);
          

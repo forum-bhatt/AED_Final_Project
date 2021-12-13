@@ -5,9 +5,8 @@
  */
 package Business.Enterprise;
 
-import Business.Role.AdminRole;
-import Business.Role.PatientRole;
-import Business.Role.PharmacistRole;
+import Business.Patients.PatientDirectory;
+import Business.Role.AmbulanceDriverRole;
 import Business.Role.Role;
 import java.util.ArrayList;
 
@@ -15,30 +14,27 @@ import java.util.ArrayList;
  *
  * @author kinjal
  */
-public class PharmacyEnterprise extends Enterprise {
+public class TransportEnterprise extends Enterprise {
 
     private EnterpriseType type;
+
+    public TransportEnterprise(String name){
+        super(name,EnterpriseType.TransportService);
+    }
     
     public void setType(EnterpriseType type) {
         this.type = type;
     }
     
-    public PharmacyEnterprise(String name){
-        super(name,EnterpriseType.Pharmacy);
-       // this.cityPatients = new PatientDirectory();
-    }
-
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();
-        roles.add(new PharmacistRole());
+        roles.add(new AmbulanceDriverRole());
         return roles;
     }
-
-   
-    @Override
+    
     public String toString(){
-        return getName();
+        return this.getName();
     }
-   
+    
 }

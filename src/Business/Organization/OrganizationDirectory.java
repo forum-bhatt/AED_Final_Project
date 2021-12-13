@@ -29,32 +29,12 @@ public class OrganizationDirectory {
             organization = new DoctorOrganization();
             organizationList.add(organization);
         }
-        else if (type.getValue().equals(Type.HospitalStaff.getValue())){
-            organization = new HospitalStaffOrganization();
-            organizationList.add(organization);
-        }
-        else if (type.getValue().equals(Type.Territory.getValue())){
-            organization = new TerritoryOrganization();
-            organizationList.add(organization);
-        }
-        else if (type.getValue().equals(Type.AmbulanceDriver.getValue())){
-            organization = new AmbulanceDriverOrganization();
-            organizationList.add(organization);
-        }
-        else if (type.getValue().equals(Type.DoctorDepartment.getValue())){
-            organization = new DoctorDepartmentOrganization();
-            organizationList.add(organization);
-        }
-        else if (type.getValue().equals(Type.DrugManufacturer.getValue())){
-            organization = new DrugManufacturerOrganization();
-            organizationList.add(organization);
-        }
-        else if (type.getValue().equals(Type.Pharmacy.getValue())){
-            organization = new PharmacyOrganization();
-            organizationList.add(organization);
-        }
         else if (type.getValue().equals(Type.Lab.getValue())){
             organization = new LabOrganization();
+            organizationList.add(organization);
+        }
+         else if (type.getValue().equals(Type.Territory.getValue())){
+            organization = new TerritoryOrganization();
             organizationList.add(organization);
         }
         

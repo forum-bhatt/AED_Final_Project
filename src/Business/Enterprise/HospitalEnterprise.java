@@ -18,11 +18,25 @@ import java.util.ArrayList;
  */
 public class HospitalEnterprise extends Enterprise {
     
+    private EnterpriseType type;
     private PatientDirectory cityPatients;
+
+
+    public void setType(EnterpriseType type) {
+        this.type = type;
+    }
     
      public HospitalEnterprise(String name){
         super(name,EnterpriseType.Hospital);
         this.cityPatients = new PatientDirectory();
+    }
+
+    public PatientDirectory getCityPatients() {
+        return cityPatients;
+    }
+
+    public void setCityPatients(PatientDirectory cityPatients) {
+        this.cityPatients = cityPatients;
     }
      
      public Organization getOrganizationByName(String name){
@@ -36,7 +50,7 @@ public class HospitalEnterprise extends Enterprise {
      
      }
 
-    public PatientDirectory getCityCustomers() {
+    public PatientDirectory getPatients() {
         return cityPatients;
     }
     
@@ -46,6 +60,11 @@ public class HospitalEnterprise extends Enterprise {
         roles.add(new PatientRole());
         roles.add(new AdminRole());
         return roles;
+    }
+    
+    @Override
+    public String toString(){
+        return getName();
     }
     
 }
