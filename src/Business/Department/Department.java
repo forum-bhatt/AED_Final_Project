@@ -5,11 +5,12 @@
  */
 package Business.Department;
 
+import Business.Doctor.Doctor;
 import java.util.ArrayList;
 
 /**
  *
- * @author foram
+ * @author kinjal
  */
 public class Department {
     // Member Variables
@@ -17,13 +18,9 @@ public class Department {
     private String departmentName;
     private String username;
     private String password;
-    //private Hospital hospital;
+  //  private Hospital hospital;
     private String departmentAdminName;
-    //private ArrayList<Doctor> doctorDirectory;
-    
-//    public Department() {
-//        this.doctorDirectory = new ArrayList();    
-//    }
+    private ArrayList<Doctor> doctorDirectory;
 
     public String getDepartmentId() {
         return departmentId;
@@ -57,6 +54,14 @@ public class Department {
         this.password = password;
     }
 
+//    public Hospital getHospital() {
+//        return hospital;
+//    }
+//
+//    public void setHospital(Hospital hospital) {
+//        this.hospital = hospital;
+//    }
+
     public String getDepartmentAdminName() {
         return departmentAdminName;
     }
@@ -64,17 +69,18 @@ public class Department {
     public void setDepartmentAdminName(String departmentAdminName) {
         this.departmentAdminName = departmentAdminName;
     }
-    
-//    public ArrayList<Doctor> getDoctorDirectory() {
-//        return this.doctorDirectory;
-//    }
-    
-    
-    // Overriding methods
-    @Override()
-    public String toString() {
-        return this.departmentName;
+
+    public ArrayList<Doctor> getDoctorDirectory() {
+        return doctorDirectory;
     }
-   
-    
+
+    public void setDoctorDirectory(ArrayList<Doctor> doctorDirectory) {
+        this.doctorDirectory = doctorDirectory;
+    }
+
+    @Override
+    public String toString() {
+        return "Department{" + "departmentName=" + departmentName + '}';
+    }
+ 
 }
