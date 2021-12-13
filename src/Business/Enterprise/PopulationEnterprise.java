@@ -20,11 +20,15 @@ public class PopulationEnterprise extends Enterprise {
     
    private PatientDirectory cityPatients;
     
-     public PopulationEnterprise(String name){
-        super(name,EnterpriseType.Population);
-        this.cityPatients = new PatientDirectory();
+//     public PopulationEnterprise(String name){
+//        super(name,EnterpriseType.Population);
+//        this.cityPatients = new PatientDirectory();
+//    }
+
+    public PopulationEnterprise(String name, EnterpriseType type) {
+        super(name, type);
     }
-     
+    
      public Organization getOrganizationByName(String name){
          
          for(Organization org:this.getOrganizationDirectory().getOrganizationList()){
