@@ -4,8 +4,10 @@
  */
 package ui.AdministrativeRole;
 
+import Business.Doctor.Doctor;
 import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
+import Business.Organization.DoctorOrganization;
 import Business.Organization.Organization;
 import Business.Role.Role;
 import Business.UserAccount.UserAccount;
@@ -246,11 +248,19 @@ public class ManageUserAccountJPanel extends javax.swing.JPanel {
     private void createUserJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserJButtonActionPerformed
         String userName = nameJTextField.getText();
         String password = passwordJTextField.getText();
-        Organization organization = (Organization) organizationJComboBox.getSelectedItem();
+        Organization organization = (DoctorOrganization) organizationJComboBox.getSelectedItem();
         Employee employee = (Employee) employeeJComboBox.getSelectedItem();
         Role role = (Role) roleJComboBox.getSelectedItem();
         
         organization.getUserAccountDirectory().createUserAccount(userName, password, employee, role);
+        
+        if(role.toString().equals("Doctor")){
+             int id = ((DoctorOrganization)organization).getDoctorDirectory().getDoctorlist().size();
+             employee.setId(id+1);
+             Doctor newDoc = new Doctor();
+             newDoc.setEmp(employee);
+             ((DoctorOrganization)organization).getDoctorDirectory().getDoctorlist().add((Doctor)newDoc);
+        }
         
         popData();
     }//GEN-LAST:event_createUserJButtonActionPerformed
