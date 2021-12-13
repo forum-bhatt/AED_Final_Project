@@ -43,6 +43,24 @@ public class UserAccountDirectory {
         return userAccount;
     }
     
+    public UserAccount getUserAccountByEmployee(Employee emp){
+        for(UserAccount user: getUserAccountList()){
+            if(user.getEmployee().equals(emp)){
+                return user;
+            }
+        }
+        return null;
+    }
+    
+    public UserAccount getUserByRole(Role.RoleType type){
+        for(UserAccount user: getUserAccountList()){
+            if(user.getRole().toString().contains(type.toString())){
+                return user;
+            }
+        }
+        return null;
+    }
+    
     public boolean checkIfUsernameIsUnique(String username){
         for (UserAccount ua : userAccountList){
             if (ua.getUsername().equals(username))
