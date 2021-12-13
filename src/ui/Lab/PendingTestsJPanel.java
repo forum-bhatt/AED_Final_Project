@@ -86,6 +86,11 @@ public class PendingTestsJPanel extends javax.swing.JPanel {
         lblTitle.setText("Pending Tests");
 
         btnDeleteTest.setText("Delete Test");
+        btnDeleteTest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteTestActionPerformed(evt);
+            }
+        });
 
         btnProcessTest.setText("Process Test Request");
         btnProcessTest.addActionListener(new java.awt.event.ActionListener() {
@@ -254,6 +259,10 @@ public class PendingTestsJPanel extends javax.swing.JPanel {
         }
         
     }//GEN-LAST:event_btnCompleteTestActionPerformed
+
+    private void btnDeleteTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteTestActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDeleteTestActionPerformed
 
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
