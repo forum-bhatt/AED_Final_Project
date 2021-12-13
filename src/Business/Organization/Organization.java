@@ -22,9 +22,19 @@ public abstract class Organization {
     private UserAccountDirectory userAccountDirectory;
     private int organizationID;
     private static int counter=0;
+    public Type type;
     
     public enum Type{
-        Admin("Admin Organization"), Doctor("Doctor Organization"), Lab("Lab Organization"),Territory("Territory");
+        Admin("Admin Organization"), 
+        Doctor("Doctor Organization"), 
+        HospitalStaff("Hospital Staff Organization"),
+        Territory("Territory"),
+        Ambulance("Ambulance Organization"),
+        DoctorDepartment("Doctor Department Organization"),
+        DrugManufacturer("Drug Manufacturer Organization"),
+        Pharmacy("Pharmacy Organization"),
+        Lab("Lab Organization");
+        
         private String value;
         private Type(String value) {
             this.value = value;
@@ -32,6 +42,18 @@ public abstract class Organization {
         public String getValue() {
             return value;
         }
+        @Override
+        public String toString() {
+            return value;
+        }
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
     }
 
     public Organization(String name) {
