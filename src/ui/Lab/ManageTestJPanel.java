@@ -46,6 +46,8 @@ public class ManageTestJPanel extends javax.swing.JPanel {
 
         jButton1.setText("jButton1");
 
+        setPreferredSize(new java.awt.Dimension(674, 347));
+
         tblTests.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tblTests.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -65,6 +67,11 @@ public class ManageTestJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(tblTests);
 
         btnAddtest.setText("Add Test");
+        btnAddtest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddtestActionPerformed(evt);
+            }
+        });
 
         btnRemovetest.setText("Remove Test");
         btnRemovetest.addActionListener(new java.awt.event.ActionListener() {
@@ -80,44 +87,40 @@ public class ManageTestJPanel extends javax.swing.JPanel {
             }
         });
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Tests");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(19, 19, 19)
+                .addComponent(btnBack)
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(btnBack)
-                        .addGap(238, 238, 238)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(333, 333, 333)
                         .addComponent(btnAddtest)
-                        .addGap(141, 141, 141)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnRemovetest))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(260, 260, 260)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(282, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 462, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(97, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(58, 58, 58)
+                .addComponent(jLabel1)
+                .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnBack)
-                    .addComponent(jLabel1))
-                .addGap(57, 57, 57)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(82, 82, 82)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAddtest)
-                    .addComponent(btnRemovetest))
-                .addContainerGap(152, Short.MAX_VALUE))
+                    .addComponent(btnRemovetest)
+                    .addComponent(btnAddtest))
+                .addContainerGap(103, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -131,6 +134,10 @@ public class ManageTestJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) CardLayoutJPanel.getLayout();
         layout.previous(CardLayoutJPanel);
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnAddtestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddtestActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAddtestActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
