@@ -24,7 +24,7 @@ public class PatientDirectory {
 
     public Patient addPatient(String name) {
         Patient newCus = new Patient();
-        //newCus.setName(name);
+        newCus.setName(name);
         this.patients.add(newCus);
         
         return newCus;
