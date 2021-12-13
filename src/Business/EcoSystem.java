@@ -37,6 +37,7 @@ public class EcoSystem extends Organization{
         roleList.add(new SystemAdminRole());
         return roleList;
     }
+    
     private EcoSystem(){
         super(null);
         networkList=new ArrayList<Network>();
@@ -49,6 +50,15 @@ public class EcoSystem extends Organization{
     public void setNetworkList(ArrayList<Network> networkList) {
         this.networkList = networkList;
     }
+    
+    public Network getNetwork(String name){
+        for(Network net:getNetworkList()){
+            if(net.getName().equals(name)){
+                return net;
+            }
+        }
+        return null;
+    } 
     
     public boolean checkIfUserIsUnique(String userName){
         if(!this.getUserAccountDirectory().checkIfUsernameIsUnique(userName)){
